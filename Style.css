@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #757984;
 }
 
 h1 {
@@ -57,10 +57,22 @@ input[type="submit"] {
     padding: 5px 20px;
     background-color: #4CAF50;
     color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 input[type="submit"]:hover {
     background-color: #45a049;
+}
+
+#HomeImage {
+    width: 600px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+
+    font-size: 24px;
+    color: #333;
 }
