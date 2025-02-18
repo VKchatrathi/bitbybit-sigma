@@ -5,7 +5,7 @@ body {
     background-color: #757984;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
     margin-top: 50px;
 }
