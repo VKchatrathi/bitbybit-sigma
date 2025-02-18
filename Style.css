@@ -35,14 +35,14 @@ input {
 }
 
 input[type="text"] {
-    width: 130px;
+    width: 260px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     background-color: rgb(244, 244, 244);
     background-image: url('searchicon.png');
-    background-position: 10px 10px; 
+    background-position: 5px 5px; 
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
     -webkit-transition: width 0.4s ease-in-out;
