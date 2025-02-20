@@ -80,7 +80,41 @@ input[type="submit"]:hover {
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-
     font-size: 24px;
     color: #333;
 }
+
+  .topnav {
+    background-color: #45584b;
+    overflow: hidden;
+  }
+  
+  .topnav img {
+    float: left;
+    height: auto; 
+    width: auto; 
+    max-width: 200px; 
+    max-height: 300px;
+    padding-right: 5%;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  
+  .topnav a.active {
+    background-color: rgb(163, 229, 206);
+    color: rgb(32, 32, 32);
+  }
