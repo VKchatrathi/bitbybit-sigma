@@ -95,6 +95,7 @@ input[type="submit"]:hover {
   .topnav {
     background-color: #45584b;
     overflow: hidden;
+    width: 100%;
   }
   
   .topnav img {
@@ -103,16 +104,34 @@ input[type="submit"]:hover {
     width: auto; 
     max-width: 200px; 
     max-height: 300px;
-    padding-right: 5%;
   }
+
+  .topnav td.pagelogo { 
+    width: 200px; 
+    padding-right: 0%;
+  }
+
+
+  .topnav td {
+    text-align: center;
+    padding: auto auto;
+    width : 300px;
+   
+}  
+
+    .topnav img:hover {
+        opacity: 0.7;
+    }
   
   .topnav a {
-    float: left;
+    float: center;
     color: #f2f2f2;
+    background-color: rgb(116, 163, 147);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    border-radius: 8px;
   }
   
   
