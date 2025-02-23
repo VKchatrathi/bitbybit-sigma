@@ -30,20 +30,21 @@
     <h1>Ingridient Swapper</h1>
     <h3>Every wanted to find a substitute, Look no further!</h3>
     <p>This website will allow you to put in your meal of choice and find you healthier alternatives or feel free to ask it for a specific type of ingridient</p>
-    <form action="/swap" method="POST">
-        
-        <!-- label for="dish">Dish Name:</label -->
+    <form id="swapForm">
         <div class="autocomplete">
-        <input type="text" id="dish" name="dish" placeholder="Search For a Recipe . . ."  autocomplete="off"  required><br><br>
+            <input type="text" id="dish" name="dish" placeholder="Search For a Recipe . . ." autocomplete="off" required><br><br>
         </div>
         
-        <!-- label for="ingredient">Ingredient to Swap:</label -->
         <input type="text" id="ingredient" name="ingredient" placeholder="Swap an Ingredient . . ." autocomplete="off" required><br><br>
-
         <input type="submit" value="Find Substitutes">
     </form>
-
-    <script src="igredientswap.js"></script>
     
+    <script src="igredientswap.js"></script>
+    <h2>Recipe Suggestions:</h2>
+    <div id="recipeResults"></div>
+
+    <!-- Section to display ingredient substitution suggestions -->
+    <h2>Substitution Suggestions:</h2>
+    <div id="substitutionResults"></div>
 </body>
 </html>
