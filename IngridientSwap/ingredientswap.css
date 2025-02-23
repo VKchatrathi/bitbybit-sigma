@@ -7,7 +7,7 @@ input[type="text"] {
     border-radius: 7px;
     font-size: 16px;
     background-color: rgb(244, 244, 244);
-    background-image: url('searchicon.png');
+    background-image: url('is-searchicon.png');
     background-position: 5px 5px; 
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
@@ -72,4 +72,28 @@ input[type="submit"]:hover {
 
     font-size: 24px;
     color: #333;
+}
+
+#recipeResults {
+    font-size: 15px;
+    color: #000000;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+#recipeResults img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+#recipeResults a {
+    padding: 10px 20px; 
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 50px;
 }

@@ -31,7 +31,6 @@ input[type="text"] {
     padding: 12px 20px 12px 40px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
-    display: inline-flexbox;
 }
 
 
@@ -48,7 +47,7 @@ body {
 /*the container must be positioned relative:*/
 .autocomplete {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
 }
 
 input {
@@ -58,10 +57,18 @@ input {
   font-size: 16px;
 }
 
-input[type=submit] {
-  background-color: #4CAF50;
-  color: #fff;
+#submitbutton {
+  font-size: 20px;
+  padding: 5px 20px;
+  background-color: #95ccab;
+  color: white;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+#subitbutton:hover {
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, .2),
+    -5px -5px 5px rgb(134, 182, 116, 0.2);
 }
 
 .autocomplete-items {
