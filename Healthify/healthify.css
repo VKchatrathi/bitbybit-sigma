@@ -4,7 +4,7 @@ input[type="text"]:focus {
   outline: none;
 }
 input[type="submit"] {
-  display: inline-block;
+  display: inline-flexbox;
   font-size: 20px;
   padding: 5px 20px;
   background-color: #4CAF50;
@@ -31,6 +31,7 @@ input[type="text"] {
     padding: 12px 20px 12px 40px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
+    display: inline-flexbox;
 }
 
 
