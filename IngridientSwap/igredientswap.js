@@ -1,290 +1,62 @@
-function autocomplete(inp, arr) {
-    /*the autocomplete function takes two arguments,
-    the text field element and an array of possible autocompleted values:*/
-    var currentFocus;
-    /*execute a function when someone writes in the text field:*/
-    inp.addEventListener("input", function(e) {
-        var a, b, i, val = this.value;
-        /*close any already open lists of autocompleted values*/
-        closeAllLists();
-        if (!val) { return false;}
-        currentFocus = -1;
-        /*create a DIV element that will contain the items (values):*/
-        a = document.createElement("DIV");
-        a.setAttribute("id", this.id + "autocomplete-list");
-        a.setAttribute("class", "autocomplete-items");
-        /*append the DIV element as a child of the autocomplete container:*/
-        this.parentNode.appendChild(a);
-        /*for each item in the array...*/
-        for (i = 0; i < arr.length; i++) {
-          /*check if the item starts with the same letters as the text field value:*/
-          if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-            /*create a DIV element for each matching element:*/
-            b = document.createElement("DIV");
-            /*make the matching letters bold:*/
-            b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-            b.innerHTML += arr[i].substr(val.length);
-            /*insert a input field that will hold the current array item's value:*/
-            b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-            /*execute a function when someone clicks on the item value (DIV element):*/
-            b.addEventListener("click", function(e) {
-                /*insert the value for the autocomplete text field:*/
-                inp.value = this.getElementsByTagName("input")[0].value;
-                /*close the list of autocompleted values,
-                (or any other open lists of autocompleted values:*/
-                closeAllLists();
-            });
-            a.appendChild(b);
-          }
-        }
-    });
-    /*execute a function presses a key on the keyboard:*/
-    inp.addEventListener("keydown", function(e) {
-        var x = document.getElementById(this.id + "autocomplete-list");
-        if (x) x = x.getElementsByTagName("div");
-        if (e.keyCode == 40) {
-          /*If the arrow DOWN key is pressed,
-          increase the currentFocus variable:*/
-          currentFocus++;
-          /*and and make the current item more visible:*/
-          addActive(x);
-        } else if (e.keyCode == 38) { //up
-          /*If the arrow UP key is pressed,
-          decrease the currentFocus variable:*/
-          currentFocus--;
-          /*and and make the current item more visible:*/
-          addActive(x);
-        } else if (e.keyCode == 13) {
-          /*If the ENTER key is pressed, prevent the form from being submitted,*/
-          e.preventDefault();
-          if (currentFocus > -1) {
-            /*and simulate a click on the "active" item:*/
-            if (x) x[currentFocus].click();
-          }
-        }
-    });
-    function addActive(x) {
-      /*a function to classify an item as "active":*/
-      if (!x) return false;
-      /*start by removing the "active" class on all items:*/
-      removeActive(x);
-      if (currentFocus >= x.length) currentFocus = 0;
-      if (currentFocus < 0) currentFocus = (x.length - 1);
-      /*add class "autocomplete-active":*/
-      x[currentFocus].classList.add("autocomplete-active");
-    }
-    function removeActive(x) {
-      /*a function to remove the "active" class from all autocomplete items:*/
-      for (var i = 0; i < x.length; i++) {
-        x[i].classList.remove("autocomplete-active");
-      }
-    }
-    function closeAllLists(elmnt) {
-      /*close all autocomplete lists in the document,
-      except the one passed as an argument:*/
-      var x = document.getElementsByClassName("autocomplete-items");
-      for (var i = 0; i < x.length; i++) {
-        if (elmnt != x[i] && elmnt != inp) {
-          x[i].parentNode.removeChild(x[i]);
-        }
-      }
-    }
-    /*execute a function when someone clicks in the document:*/
-    document.addEventListener("click", function (e) {
-        closeAllLists(e.target);
-    });
-  }
-  
-  
-  /*An array containing all the country names in the world:*/
-  var dishes = [
-  
-  'asparagus',
-  'apples',
-  'avocado',
-  'alfalfa',
-  'acorn squash',
-  'almond',
-  'arugula',
-  'artichoke',
-  'applesauce',
-  'asian noodles',
-  'antelope',
-  'ahi tuna',
-  'albacore tuna',
-  'apple juice',
-  'avocado roll',
-  'bruschetta',
-  'bacon',
-  'black beans',
-  'bagels',
-  'biryani',
-  'baked beans',
-  'BBQ',
-  'bison',
-  'barley',
-  'bisque',
-  'bluefish',
-  'bread',
-  'broccoli',
-  'burrito',
-  'baba ganoush',
-  'cabbage',
-  'cake',
-  'carrots',
-  'carne asada',
-  'celery',
-  'cheese',
-  'chicken',
-  'catfish',
-  'chips',
-  'chocolate',
-  'clam chowder',
-  'clams',
-  'coffee',
-  'cookies',
-  'corn',
-  'cupcakes',
-  'crab',
-  'cereal',
-  'chimichanga',
-  'dates',
-  'duck',
-  'dumplings',
-  'donuts',
-  'eggs',
-  'enchilada',
-  'eggrolls',
-  'english muffins',
-  'edamame',
-  'eel sushi',
-  'fajita',
-  'falafel',
-  'franks',
-  'fondu',
-  'french toast',
-  'french dip',
-  'garlic',
-  'ginger',
-  'gnocchi',
-  'goose',
-  'granola',
-  'grapes',
-  'green beans',
-  'guacamole',
-  'gumbo',
-  'grits',
-  'graham crackers',
-  'ham',
-  'halibut',
-  'hamburger',
-  'honey',
-  'huevos rancheros',
-  'hash browns',
-  'hot dogs',
-  'haiku roll',
-  'hummus',
-  'ice cream',
-  'jambalaya',
-  'jelly / jam',
-  'jerky',
-  'jalapeño',
-  'kale',
-  'kabobs',
-  'ketchup',
-  'kiwi',
-  'kidney beans',
-  'kingfish',
-  'lobster',
-  'lamb',
-  'linguine',
-  'lasagna',
-  'meatballs',
-  'moose',
-  'milk',
-  'milkshake',
-  'noodles',
-  'ostrich',
-  'pizza',
-  'pepperoni',
-  'porter',
-  'pancakes',
-  'quesadilla',
-  'quiche',
-  'reuben',
-  'spinach',
-  'spaghetti',
-  'tater tots',
-  'toast',
-  'venison',
-  'waffles',
-  'wine',
-  'walnuts',
-  'yogurt',
-  'ziti',
-  'zucchini'];
-  
-  
-  /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-  autocomplete(document.getElementById("dish"), dishes);
+document.addEventListener('DOMContentLoaded', function() {
+  const apiKey = 'c21762e803a9480680f2aaecf1e16952'; // Insert your Spoonacular API key here
 
-        const apiKey = 'c21762e803a9480680f2aaecf1e16952';// Insert your Spoonacular API key here
+  // Listen for the form submission
+  document.getElementById('swapForm').addEventListener('submit', function(event) {
+      event.preventDefault();  // Prevent form from refreshing the page
 
-        // Listen for the form submission
-        document.getElementById('swapForm').addEventListener('submit', function(event) {
-            event.preventDefault();  // Prevent form from refreshing the page
+      // Get the values entered by the user
+      const dishName = document.getElementById('dish').value;
+      const ingredient = document.getElementById('ingredient').value;
 
-            // Get the values entered by the user
-            const dishName = document.getElementById('dish').value;
-            const ingredient = document.getElementById('ingredient').value;
+      // Step 1: Fetch recipes based on dish name
+      const recipeApiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${dishName}&apiKey=${apiKey}`;
 
-            // Step 1: Fetch recipes based on dish name
-            const recipeApiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${dishName}&apiKey=${apiKey}`;
+      fetch(recipeApiUrl)
+          .then(response => response.json())  // Convert response to JSON format
+          .then(data => {
+              let recipeHTML = '';
+              if (data.results && data.results.length > 0) {
+                  // If recipes are found, display them
+                  data.results.forEach(recipe => {
+                      recipeHTML += `
+                          <div>
+                              <h3>${recipe.title}</h3>
+                              <img src="${recipe.image}" alt="${recipe.title}" style="width: 150px; height: auto;">
+                              <p><a href="https://spoonacular.com/recipes/${recipe.title}-${recipe.id}" target="_blank">View Recipe</a></p>
+                          </div>
+                      `;
+                  });
+              } else {
+                  recipeHTML = '<p>No recipes found. Please try another dish.</p>';
+              }
+              // Display the recipe results
+              document.getElementById('recipeResults').innerHTML = recipeHTML;
+          })
+          .catch(error => {
+              console.error('Error fetching recipe:', error);
+          });
 
-            fetch(recipeApiUrl)
-                .then(response => response.json())  // Convert response to JSON format
-                .then(data => {
-                    let recipeHTML = '';
-                    if (data.results && data.results.length > 0) {
-                        // If recipes are found, display them
-                        data.results.forEach(recipe => {
-                            recipeHTML += `
-                                <div>
-                                    <h3>${recipe.title}</h3>
-                                    <img src="${recipe.image}" alt="${recipe.title}" style="width: 150px; height: auto;">
-                                    <p><a href="https://spoonacular.com/recipes/${recipe.title}-${recipe.id}" target="_blank">View Recipe</a></p>
-                                </div>
-                            `;
-                        });
-                    } else {
-                        recipeHTML = '<p>No recipes found. Please try another dish.</p>';
-                    }
-                    // Display the recipe results
-                    document.getElementById('recipeResults').innerHTML = recipeHTML;
-                })
-                .catch(error => {
-                    console.error('Error fetching recipe:', error);
-                });
+      // Step 2: Fetch ingredient substitutions based on the ingredient name
+      const substitutionApiUrl = `https://api.spoonacular.com/food/ingredients/substitutes?ingredientName=${ingredient}&apiKey=${apiKey}`;
 
-            // Step 2: Fetch ingredient substitutions based on the ingredient name
-            const substitutionApiUrl = `https://api.spoonacular.com/food/ingredients/substitutes?ingredientName=${ingredient}&apiKey=${apiKey}`;
-
-            fetch(substitutionApiUrl)
-                .then(response => response.json())  // Convert response to JSON format
-                .then(data => {
-                    let substitutionHTML = '';
-                    if (data.substitutes && data.substitutes.length > 0) {
-                        // If substitutions are found, display them
-                        data.substitutes.forEach(sub => {
-                            substitutionHTML += `<p>${sub}</p>`;
-                        });
-                    } else {
-                        substitutionHTML = '<p>No substitutions found.</p>';
-                    }
-                    // Display the substitution results
-                    document.getElementById('substitutionResults').innerHTML = substitutionHTML;
-                })
-                .catch(error => {
-                    console.error('Error fetching substitutions:', error);
-                });
-        });
+      fetch(substitutionApiUrl)
+          .then(response => response.json())  // Convert response to JSON format
+          .then(data => {
+              let substitutionHTML = '';
+              if (data.substitutes && data.substitutes.length > 0) {
+                  // If substitutions are found, display them
+                  data.substitutes.forEach(sub => {
+                      substitutionHTML += `<p>${sub}</p>`;
+                  });
+              } else {
+                  substitutionHTML = '<p>No substitutions found.</p>';
+              }
+              // Display the substitution results
+              document.getElementById('substitutionResults').innerHTML = substitutionHTML;
+          })
+          .catch(error => {
+              console.error('Error fetching substitutions:', error);
+          });
+  });
+});
