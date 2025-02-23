@@ -118,7 +118,7 @@ var dishes = [
 'bacon',
 'black beans',
 'bagels',
-'biriyani',
+'biryani',
 'baked beans',
 'BBQ',
 'bison',
