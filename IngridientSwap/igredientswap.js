@@ -228,7 +228,7 @@ function autocomplete(inp, arr) {
   /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
   autocomplete(document.getElementById("dish"), dishes);
 
-  const apiKey = 'c21762e803a9480680f2aaecf1e16952';  // Insert your Spoonacular API key here
+        const apiKey = 'c21762e803a9480680f2aaecf1e16952';// Insert your Spoonacular API key here
 
         // Listen for the form submission
         document.getElementById('swapForm').addEventListener('submit', function(event) {
