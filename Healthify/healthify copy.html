@@ -1,4 +1,46 @@
-function autocomplete(inp, arr) {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IngrediSwap</title>
+    <link rel="icon" type="image/x-icon" href="h-logo.png">
+    <link rel="stylesheet" href="./healthify.css">
+    <link rel="stylesheet" href="../MAIN.css">
+    <!--<script src="healthify.js"></script>-->
+
+</head>
+<body>
+
+    <table class="topnav">
+        <tr>
+            <td class="pagelogo">
+                <img src="../HomePage/hp-ingrediswap.png" alt="HomeLogo" id="HomeLogo" href="../HomePage/index.html">
+            </td>
+            <td class="pagebuttons">
+                <a href="../HomePage/index.html">Home</a>
+            </td>
+            <td class="pagebuttons">
+                <a href="../IngridientSwap/ingredientswap.html">IngrediSwap</a>
+            </td>
+            <td class="pagebuttons">
+                <a  class="active" href="../Healthify/healthify.html">Healthify</a>
+            </td>
+        </tr>
+    </table>
+
+    <h1>Ingridient (Healthify) Swapper</h1>
+    <h3>Every wanted to find a substitute, Look no further!</h3>
+    <p>This website will allow you to put in your meal of choice and find you healthier alternatives or feel free to ask it for a specific type of ingridient</p>
+    <form autocomplete="off" action="">
+        
+        <div class="autocomplete">
+            <input type="text" id="dish" name="myDish" placeholder="Search For a Recipe . . ."><br><br>
+        </div>
+        <input type="submit">
+    </form>
+    <script>
+        function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/
     var currentFocus;
@@ -95,135 +137,135 @@ function autocomplete(inp, arr) {
     });
   }
   
-  
   /*An array containing all the country names in the world:*/
   var dishes = [
-  
-  'asparagus',
-  'apples',
-  'avocado',
-  'alfalfa',
-  'acorn squash',
-  'almond',
-  'arugula',
-  'artichoke',
-  'applesauce',
-  'asian noodles',
-  'antelope',
-  'ahi tuna',
-  'albacore tuna',
-  'apple juice',
-  'avocado roll',
-  'bruschetta',
-  'bacon',
-  'black beans',
-  'bagels',
-  'biryani',
-  'baked beans',
-  'BBQ',
-  'bison',
-  'barley',
-  'bisque',
-  'bluefish',
-  'bread',
-  'broccoli',
-  'burrito',
-  'baba ganoush',
-  'cabbage',
-  'cake',
-  'carrots',
-  'carne asada',
-  'celery',
-  'cheese',
-  'chicken',
-  'catfish',
-  'chips',
-  'chocolate',
-  'clam chowder',
-  'clams',
-  'coffee',
-  'cookies',
-  'corn',
-  'cupcakes',
-  'crab',
-  'cereal',
-  'chimichanga',
-  'dates',
-  'duck',
-  'dumplings',
-  'donuts',
-  'eggs',
-  'enchilada',
-  'eggrolls',
-  'english muffins',
-  'edamame',
-  'eel sushi',
-  'fajita',
-  'falafel',
-  'franks',
-  'fondu',
-  'french toast',
-  'french dip',
-  'garlic',
-  'ginger',
-  'gnocchi',
-  'goose',
-  'granola',
-  'grapes',
-  'green beans',
-  'guacamole',
-  'gumbo',
-  'grits',
-  'graham crackers',
-  'ham',
-  'halibut',
-  'hamburger',
-  'honey',
-  'huevos rancheros',
-  'hash browns',
-  'hot dogs',
-  'haiku roll',
-  'hummus',
-  'ice cream',
-  'jambalaya',
-  'jelly / jam',
-  'jerky',
-  'jalapeño',
-  'kale',
-  'kabobs',
-  'ketchup',
-  'kiwi',
-  'kidney beans',
-  'kingfish',
-  'lobster',
-  'lamb',
-  'linguine',
-  'lasagna',
-  'meatballs',
-  'moose',
-  'milk',
-  'milkshake',
-  'noodles',
-  'ostrich',
-  'pizza',
-  'pepperoni',
-  'porter',
-  'pancakes',
-  'quesadilla',
-  'quiche',
-  'reuben',
-  'spinach',
-  'spaghetti',
-  'tater tots',
-  'toast',
-  'venison',
-  'waffles',
-  'wine',
-  'walnuts',
-  'yogurt',
-  'ziti',
-  'zucchini'];
-  
+
+    'asparagus',
+    'apples',
+    'avocado',
+    'alfalfa',
+    'acorn squash',
+    'almond',
+    'arugula',
+    'artichoke',
+    'applesauce',
+    'asian noodles',
+    'antelope',
+    'ahi tuna',
+    'albacore tuna',
+    'apple juice',
+    'avocado roll',
+    'bruschetta',
+    'bacon',
+    'black beans',
+    'bagels',
+    'baked beans',
+    'BBQ',
+    'bison',
+    'barley',
+    'bisque',
+    'bluefish',
+    'bread',
+    'broccoli',
+    'burrito',
+    'baba ganoush',
+    'cabbage',
+    'cake',
+    'carrots',
+    'carne asada',
+    'celery',
+    'cheese',
+    'chicken',
+    'catfish',
+    'chips',
+    'chocolate',
+    'clam chowder',
+    'clams',
+    'coffee',
+    'cookies',
+    'corn',
+    'cupcakes',
+    'crab',
+    'cereal',
+    'chimichanga',
+    'dates',
+    'duck',
+    'dumplings',
+    'donuts',
+    'eggs',
+    'enchilada',
+    'eggrolls',
+    'english muffins',
+    'edamame',
+    'eel sushi',
+    'fajita',
+    'falafel',
+    'franks',
+    'fondu',
+    'french toast',
+    'french dip',
+    'garlic',
+    'ginger',
+    'gnocchi',
+    'goose',
+    'granola',
+    'grapes',
+    'green beans',
+    'guacamole',
+    'gumbo',
+    'grits',
+    'graham crackers',
+    'ham',
+    'halibut',
+    'hamburger',
+    'honey',
+    'huevos rancheros',
+    'hash browns',
+    'hot dogs',
+    'haiku roll',
+    'hummus',
+    'ice cream',
+    'jambalaya',
+    'jelly / jam',
+    'jerky',
+    'jalapeño',
+    'kale',
+    'kabobs',
+    'ketchup',
+    'kiwi',
+    'kidney beans',
+    'kingfish',
+    'lobster',
+    'lamb',
+    'linguine',
+    'lasagna',
+    'meatballs',
+    'moose',
+    'milk',
+    'milkshake',
+    'noodles',
+    'ostrich',
+    'pizza',
+    'pepperoni',
+    'porter',
+    'pancakes',
+    'quesadilla',
+    'quiche',
+    'reuben',
+    'spinach',
+    'spaghetti',
+    'tater tots',
+    'toast',
+    'venison',
+    'waffles',
+    'wine',
+    'walnuts',
+    'yogurt',
+    'ziti',
+    'zucchini'];
   
   /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
   autocomplete(document.getElementById("dish"), dishes);
+    </script>
+</body>
+</html>

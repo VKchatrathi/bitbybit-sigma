@@ -1,25 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IngrediSwap</title>
+    <link rel="icon" type="image/x-icon" href="h-logo.png">
     <link rel="stylesheet" href="healthify.css">
-    <script src="healthify.js"></script>
-
-</head>
+    <link rel="stylesheet" href="../MAIN.css">
+    <!--<script src="healthify.js"></script>-->
+</head>     
 <body>
+
+<table class="topnav">
+    <tr>
+        <td class="pagelogo">
+            <img src="../HomePage/hp-ingrediswap.png" alt="HomeLogo" id="HomeLogo" href="../HomePage/index.html">
+        </td>
+        <td class="pagebuttons">
+            <a href="../HomePage/index.html">Home</a>
+        </td>
+        <td class="pagebuttons">
+            <a href="../IngridientSwap/ingredientswap.html">IngrediSwap</a>
+        </td>
+        <td class="pagebuttons">
+            <a  class="active" href="../Healthify/healthify.html">Healthify</a>
+        </td>
+    </tr>
+</table>
+
     <h1>Ingridient (Healthify) Swapper</h1>
     <h3>Every wanted to find a substitute, Look no further!</h3>
     <p>This website will allow you to put in your meal of choice and find you healthier alternatives or feel free to ask it for a specific type of ingridient</p>
-    <form action="/swap" method="POST">
-        
-        <!-- label for="dish">Dish Name:</label -->
-        <input type="text" id="dish" name="dish" placeholder="Search For a Recipe . . ."><br><br>
 
-        <input type="submit" value="Healthify">
-    </form>
-    <a href="../IngridientSwap/ingredientswap.html" id="IngrediSwap">IngrediSwap</a>
-    <a href="../HomePage/index.html" id="Healthify">Home</a>
+<form autocomplete="off" action="">
+    <div class="autocomplete">
+    <input type="text" id="dish" name="myDish" placeholder="Search For a Recipe . . .">
+  </div>
+  <input type="submit">
+</form>
+
+<script src="healthify.js"></script>
+
 </body>
 </html>
