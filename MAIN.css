@@ -114,3 +114,9 @@ input {
     box-shadow: 6px 6px 6px rgba(0, 0, 0, .2) inset,
     -5px -5px 5px rgb(134, 182, 116, 0.2) inset;
   }
+  #box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  } 
