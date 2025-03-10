@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="h-logo.png">
     <link rel="stylesheet" href="healthify.css">
     <link rel="stylesheet" href="../MAIN.css">
+    <script src="healthify.js"></script>
     <!--<script src="healthify.js"></script>-->
 </head>     
 <body>
@@ -33,14 +34,15 @@
     <h3>Every wanted to find a substitute, Look no further!</h3>
     <p>This website will allow you to put in your meal of choice and find you healthier alternatives or feel free to ask it for a specific type of ingridient</p>
 
-<form autocomplete="off" action="">
+<form autocomplete="off" id="healthifyForm">
     <div class="autocomplete">
     <input type="text" id="dish" name="myDish" placeholder="Search For a Recipe . . .">
   </div>
-  <input type="submit" id="subitbutton">
+  <input type="submit" id="submitbutton">
 </form>
 
-<script src="healthify.js"></script>
+
+<div id="recipeResults"></div>
 
 </body>
 </html>

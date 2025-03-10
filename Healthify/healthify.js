@@ -112,10 +112,10 @@ var dishes = [
 'bacon',
 'black beans',
 'bagels',
-'biryani',
 'baked beans',
 'BBQ',
 'bison',
+'biryani',
 'barley',
 'bisque',
 'bluefish',
@@ -222,11 +222,12 @@ var dishes = [
 
 autocomplete(document.getElementById("dish"), dishes);
 
-document.addEventListener('DOMContentLoaded', function () {
+ocument.addEventListener('DOMContentLoaded', function () {
   const apiKey = 'c21762e803a9480680f2aaecf1e16952';
+  const form = document.getElementById("healthifyForm");
 
-  const form = document.getElementById("recipeForm");
   if (form) {
+      // Change "submitbutton" to "submit"
       form.addEventListener("submit", function(event) {
           event.preventDefault();
           const dish = document.getElementById("dish").value.trim();
