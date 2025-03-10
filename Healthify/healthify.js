@@ -223,7 +223,7 @@ var dishes = [
 autocomplete(document.getElementById("dish"), dishes);
 
 document.addEventListener('DOMContentLoaded', function () {
-  const apiKey = 'YOUR_SPOONACULAR_API_KEY';
+  const apiKey = 'c21762e803a9480680f2aaecf1e16952';
 
   const form = document.getElementById("recipeForm");
   if (form) {
