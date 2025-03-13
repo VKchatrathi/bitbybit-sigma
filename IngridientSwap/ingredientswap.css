@@ -75,11 +75,26 @@ input[type="submit"]:hover {
 }
 
 #recipeResults {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-gap: 50px;
     font-size: 15px;
     color: #000000;
-    margin-top: 50px;
-    margin-left: 50px;
+    justify-content: center;
 }
+
+
+#recipeResults div {
+    background-color: rgb(208, 255, 247, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+    text-align: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+
 
 #recipeResults img {
     display: block;
