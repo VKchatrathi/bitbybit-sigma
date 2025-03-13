@@ -112,10 +112,10 @@ var dishes = [
 'bacon',
 'black beans',
 'bagels',
-'biryani',
 'baked beans',
 'BBQ',
 'bison',
+'biryani',
 'barley',
 'bisque',
 'bluefish',
@@ -221,3 +221,57 @@ var dishes = [
 
 
 autocomplete(document.getElementById("dish"), dishes);
+
+ocument.addEventListener('DOMContentLoaded', function () {
+  const apiKey = 'c21762e803a9480680f2aaecf1e16952';
+  const form = document.getElementById("healthifyForm");
+
+  if (form) {
+      // Change "submitbutton" to "submit"
+      form.addEventListener("submit", function(event) {
+          event.preventDefault();
+          const dish = document.getElementById("dish").value.trim();
+
+          if (dish) {
+              fetchHealthyRecipes(dish);
+          } else {
+              alert("Please enter a dish name to search for.");
+          }
+      });
+  }
+
+  function fetchHealthyRecipes(dish) {
+      const maxCalories = 500;
+      const diet = 'vegetarian';
+      const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${dish}&maxCalories=${maxCalories}&diet=${diet}&number=5`;
+
+      fetch(url)
+          .then(response => response.json())
+          .then(data => displayRecipes(data.results))
+          .catch(error => {
+              console.error("Error fetching recipes:", error);
+              document.getElementById("recipeResults").innerHTML = "<p>Failed to fetch recipes. Please try again later.</p>";
+          });
+  }
+
+  function displayRecipes(recipes) {
+      const resultsDiv = document.getElementById("recipeResults");
+
+      if (recipes.length > 0) {
+          resultsDiv.innerHTML = "<h3>Healthy Recipe Suggestions:</h3><ul>";
+          recipes.forEach(recipe => {
+              resultsDiv.innerHTML += `
+                  <li>
+                      <h4>${recipe.title}</h4>
+                      <p>Ready in ${recipe.readyInMinutes} minutes, Serves ${recipe.servings} people.</p>
+                      <img src="${recipe.image}" alt="${recipe.title}" style="width:100px;">
+                      <p><a href="https://spoonacular.com/recipes/${recipe.id}" target="_blank">View Recipe</a></p>
+                  </li>
+              `;
+          });
+          resultsDiv.innerHTML += "</ul>";
+      } else {
+          resultsDiv.innerHTML = "<p>No healthy recipes found for your search. Please try another dish.</p>";
+      }
+  }
+});
