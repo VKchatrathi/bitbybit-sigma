@@ -7,7 +7,7 @@ input[type="text"] {
     border-radius: 7px;
     font-size: 16px;
     background-color: rgb(244, 244, 244);
-    background-image: url('searchicon.png');
+    background-image: url('is-searchicon.png');
     background-position: 5px 5px; 
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
@@ -73,56 +73,42 @@ input[type="submit"]:hover {
     font-size: 24px;
     color: #333;
 }
-.topnav {
-    background-color: #45584b;
-    overflow: hidden;
-    width: 100%;
-  }
-  
-  .topnav img {
-    float: left;
-    height: auto; 
-    width: auto; 
-    max-width: 200px; 
-    max-height: 300px;
-  }
 
-  .topnav td.pagelogo { 
-    width: 200px; 
-    padding-right: 0%;
-  }
+#recipeResults {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-gap: 50px;
+    font-size: 15px;
+    color: #000000;
+    justify-content: center;
+}
 
 
-  .topnav td {
+#recipeResults div {
+    background-color: rgb(208, 255, 247, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
     text-align: center;
-    padding: auto auto;
-    width : 300px;
-   
-}  
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
 
-    .topnav img:hover {
-        opacity: 0.7;
-    }
-  
-  .topnav a {
-    float: center;
-    color: #f2f2f2;
-    background-color: rgb(116, 163, 147);
-    text-align: center;
-    padding: 14px 16px;
+
+
+#recipeResults img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+#recipeResults a {
+    padding: 10px 20px; 
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
     text-decoration: none;
-    font-size: 17px;
-    border-radius: 8px;
-  }
-  
-  
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  
-  .topnav a.active {
-    background-color: rgb(163, 229, 206);
-    color: rgb(32, 32, 32);
-  }
+    margin-top: 50px;
+}
