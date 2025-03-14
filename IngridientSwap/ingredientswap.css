@@ -1,4 +1,7 @@
 
+body {
+    background-image: url("");
+}
 
 input[type="text"] {
     width: 260px;
