@@ -1,6 +1,7 @@
 
 body {
-    background-image: url("");
+    background-image: url("IngrediSwapBackDrop.jpg");
+    background-size: cover;
 }
 
 input[type="text"] {

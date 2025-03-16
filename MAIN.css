@@ -4,7 +4,7 @@
     --main-bg-color: #006769;
     /* text-colors */
     --two-text-color: #d8d8d8;
-    --main-text-color: #3c5135;
+    --main-text-color: #ffffff;
     /* hover-colors */
     --two-color-hover: #e6ff94;
     --main-color-hover: #40a578;
@@ -81,7 +81,8 @@ input {
     width: 100%;
     overflow: hidden;
     -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(7.5px);
+    box-shadow:  5px 4px 3px rgba(0, 0, 0, .3);
   }
   
   .topnav img {
@@ -100,7 +101,7 @@ input {
   .topnav a {
     float: left;
     color: var(--main-text-color);
-    background-color: var(--two-bg-color);
+    background-color: var(--two-bg-color-hover);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
