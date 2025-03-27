@@ -1,10 +1,3 @@
-
-body {
-    background-image: url("IngrediSwapBackDrop.jpg");
-    background-size: cover;
-    color: #fff;
-}
-
 input[type="text"] {
     width: 260px;
     box-sizing: border-box;
@@ -76,7 +69,7 @@ input[type="submit"]:hover {
     margin-top: 50px;
 
     font-size: 24px;
-    color: #6e0000;
+    color: #333;
 }
 
 #recipeResults {
@@ -106,26 +99,14 @@ input[type="submit"]:hover {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
-    z-index: 1;
 }
 
 #recipeResults a {
+    padding: 10px 20px; 
+    background-color: #4CAF50;
     color: white;
+    border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-}
-
-#recipeResults div:hover {
-    box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
-}
-
-#recipeResults .save {
-    display: flex;
-    justify-self: end;
-    background-color: #eaeaea;
-    width: 40px;
-    height: 20px;
-    cursor: pointer;
-    text-align: center;
-    z-index: 2;
+    margin-top: 50px;
 }
