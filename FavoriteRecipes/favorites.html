@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites</title>
+    <link rel="stylesheet" href="favorites.css">
+    <link rel="stylesheet" href="../MAIN.css">
+    <link rel="icon" type="image/x-icon" href="is-logo.png">
+
+</head>
+<body onload="showFavorites()">
+    <table class="topnav">
+        <tr>
+            <td class="pagelogo">
+                <img src="hp-ingrediswap.png" alt="HomeLogo" id="HomeLogo" href="../HomePage/index.html">
+            </td>
+            <td class="pagebuttons">
+                <a  href="../HomePage/index.html">Home</a>
+            </td>
+            <td class="pagebuttons">
+                <a href="../IngridientSwap/ingredientswap.html">IngrediSwap</a>
+            </td>
+            <td class="pagebuttons">
+                <a href="../Healthify/healthify.html">Healthify</a>
+            </td>
+            <td class="pagebuttons">
+                <a class="active" href="../FavoriteRecipes/favorites.html">Favorites</a>
+            </td>
+        </tr>
+    </table>
+    <h1>Favorites</h1>
+    <h3>Love a recipe?</h3>
+    <p>Click the Star to keep it here and Not have to go through the hassle of searching it everytime</p>
+    
+    
+    <script src="favorites.js"></script>
+    <script src="../autocorrect.js"></script>
+    
+
+    <h2>Favorite Recipes:</h2>
+    <div id="favoritesResults"></div>
+    
+</body>
+</html>

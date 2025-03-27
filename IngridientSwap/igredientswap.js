@@ -19,12 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
               if (data.results && data.results.length > 0) {
                   
                   data.results.forEach(recipe => {
-                      recipeHTML += `
+                      recipeHTML += `  
                           <div>
-                              <h3>${recipe.title}</h3>
-                              <img src="${recipe.image}" alt="${recipe.title}" style="width: 150px; height: auto;">
-                              <p><a href="https://spoonacular.com/recipes/${recipe.title}-${recipe.id}" target="_blank">View Recipe</a></p>
+                          <button type="button" class="save" onclick="save(${recipe.id},${recipe.title}, ${recipe.image}, ${recipe.id})">save</button>
+                          <a href="https://spoonacular.com/recipes/${recipe.title}-${recipe.id}" target="_blank">
+                                <img src="${recipe.image}" alt="${recipe.title}" style="width: 100%; height: auto; border-radius: 10px;">
+                                <h3>${recipe.title}</h3>
+                                </a>
                           </div>
+                          
+
                       `;
                   });
               } else {
@@ -60,3 +64,11 @@ document.addEventListener('DOMContentLoaded', function() {
           });
   });
 });
+
+function save(itemname, title, img, id) {
+    
+    localStorage.setItem("save: "+itemname+": title", title);
+    localStorage.setItem("save: "+itemname+": img", img);
+    localStorage.setItem("save: "+itemname+": id", id);
+    alert('Recipe saved!');
+}
