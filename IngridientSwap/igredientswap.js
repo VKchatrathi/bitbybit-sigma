@@ -66,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function save(itemname, title, img, id) {
-    
     localStorage.setItem("save: "+itemname+": title", title);
     localStorage.setItem("save: "+itemname+": img", img);
     localStorage.setItem("save: "+itemname+": id", id);
