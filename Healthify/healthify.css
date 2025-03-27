@@ -1,60 +1,21 @@
-
-input[type="text"]:focus {
-  width: 30%;
-  outline: none;
-}
-input[type="submit"] {
-  display: inline-flexbox;
-  font-size: 20px;
-  padding: 5px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  
-}
-
-input[type="submit"]:hover {
-  background-color: #45a049;
-}
-
 input[type="text"] {
-    width: 260px;
-    box-sizing: border-box;
-    border: none;
-    border-radius: 7px;
-    font-size: 16px;
-    background-color: rgb(244, 244, 244);
-    background-image: url('h-searchicon.png');
-    background-position: 5px 5px; 
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-
-
-
-
-/*the container must be positioned relative:*/
-.autocomplete {
-  position: relative;
-  display: inline-flex;
-}
-
-
-#submitbutton {
-  font-size: 20px;
-  padding: 5px 20px;
-  background-color: #95ccab;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#subitbutton:hover {
-  box-shadow: 6px 6px 6px rgba(0, 0, 0, .2),
-    -5px -5px 5px rgb(134, 182, 116, 0.2);
+  width: 260px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  background-color: rgb(244, 244, 244);
+  background-image: url('is-searchicon.png');
+  background-position: 5px 5px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .autocomplete-items {
@@ -63,8 +24,9 @@ input[type="text"] {
   border-bottom: none;
   border-top: none;
   z-index: 99;
-  border-radius: 7px;
   top: 100%;
+  left: 0;
+  right: 0;
 }
 
 .autocomplete-items div {
@@ -81,5 +43,23 @@ input[type="text"] {
 
 
 .autocomplete-active {
-  background-color: #4CAF50  !important; 
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+input[type="text"]:focus {
+  width: 30%;
+  outline: none;
+}
+input[type="submit"] {
+  font-size: 20px;
+  padding: 5px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
 }
