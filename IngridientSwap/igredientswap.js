@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const ingredient = document.getElementById('ingredient').value;
 
       
-      const recipeApiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${dishName}&apiKey=${apiKey}&excludeIngredients=${ingredient}`;
+      const recipeApiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${dishName}&apiKey=${apiKey}&excludeIngredients=${ingredient}&number=30`;
 
       fetch(recipeApiUrl)
           .then(response => response.json())  
