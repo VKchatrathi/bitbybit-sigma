@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
   const apiKey = 'c21762e803a9480680f2aaecf1e16952'; 
 
@@ -20,19 +21,19 @@ document.addEventListener('DOMContentLoaded', function() {
                   
                   data.results.forEach(recipe => {
                       recipeHTML += `  
-                          <div>
+                      
+                          <div id="recipeCard" onclick="genWaver(${recipe.id})">
                           <button type="button" class="save" onclick="save(${recipe.id},${recipe.title}, ${recipe.image}, ${recipe.id})">save</button>
                           <a href="https://spoonacular.com/recipes/${recipe.title}-${recipe.id}" target="_blank">
                                 <img src="${recipe.image}" alt="${recipe.title}" style="width: 100%; height: auto; border-radius: 10px;">
                                 <h3>${recipe.title}</h3>
                                 </a>
                           </div>
-                          
 
                       `;
                   });
               } else {
-                  recipeHTML = '<p>No recipes found. Please try another dish.</p>';
+                  recipeHTML = '<p style="text-align: center">No recipes found. Please try another dish.</p>';
               }
               
               document.getElementById('recipeResults').innerHTML = recipeHTML;
@@ -63,6 +64,44 @@ document.addEventListener('DOMContentLoaded', function() {
               console.error('Error fetching substitutions:', error);
           });
   });
+
+
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const apiKey = 'c21762e803a9480680f2aaecf1e16952'; 
+  
+    
+    function genWaver(id){
+        const genWaverApiUrl = `https://api.spoonacular.com/recipes/${id}/card`;
+  
+        fetch(genWaverApiUrl)
+            .then(response => response.json())  
+            .then(data => {
+                let waverHTML = '';
+                if (data.results && data.results.length > 0) {
+                    
+                    data.results.forEach(waver => {
+                        waverHTML += `  
+                            <div id="recipeWaver">
+                                  <img src="${waver.url}" style="width: 100%; height: auto; display: flex; justify-self: center; z-index: 90;">
+                            </div>
+                            
+  
+                        `;
+                    });
+                } else {
+                    waverHTML = '<p style="text-align: center">No recipes found. Please try another dish.</p>';
+                }
+                
+                document.getElementById('waver').innerHTML = waverHTML;
+            })
+            .catch(error => {
+                console.error('Error fetching recipe:', error);
+            });
+    };
+  
+    
 });
 
 function save(itemname, title, img, id) {

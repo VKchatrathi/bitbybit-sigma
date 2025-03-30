@@ -113,7 +113,7 @@ input[type="submit"]:hover {
 }
 
 #recipeResults .save {
-  display: flex;
+  display:flex;
   justify-self: end;
   background-color: #eaeaea;
   width: 40px;

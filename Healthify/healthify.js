@@ -27,10 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             <a href="https://spoonacular.com/recipes/${recipe.title}-${recipe.id}" target="_blank">
                                   <img src="${recipe.image}" alt="${recipe.title}" style="width: 100%; height: auto; border-radius: 10px;">
                                   <h3>${recipe.title}</h3>
+                                  <p>Calories: </p>
                                   </a>
                             </div>
-                            
-  
                         `;
                     });
                 } else {
@@ -44,3 +43,4 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     });
 });
+
