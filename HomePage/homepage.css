@@ -11,7 +11,8 @@
 }
 
 body {
-    background-image: url('HomePageBackDrop.png');
+    background-image: url('HomePageBackDrop.jpg');
+    background-size: cover;
 }
 
 h3 {
