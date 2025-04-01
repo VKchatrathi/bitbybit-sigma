@@ -84,7 +84,8 @@ input[type="favoritestext"] {
 }
 
 body {
-    background-image: url('backgroundtest2.webp');
+    background-image: url('image.png');
+    background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
     font-family: 'Courier New', Courier, monospacens-serif;
