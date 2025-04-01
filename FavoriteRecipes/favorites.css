@@ -60,6 +60,18 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 
+input[type="favoritestext"] {
+    width: 260px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 7px;
+    font-size: 40px;
+    background-color: rgb(244, 244, 244);
+    background-image: url('is-searchicon.png');
+    background-position: 5px 5px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
 #HomeImage {
     width: 600px;
     height: auto;
@@ -71,6 +83,12 @@ input[type="submit"]:hover {
     font-size: 24px;
     color: #333;
 }
+
+body {
+    background-image: url('IngrediSwapBackDrop.jpg');
+    background-size: cover;
+}
+
 
 #recipeResults {
     display: grid;
