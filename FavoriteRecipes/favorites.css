@@ -3,7 +3,7 @@ input[type="text"] {
     box-sizing: border-box;
     border: none;
     border-radius: 7px;
-    font-size: 16px;
+    font-size: 25px;
     background-color: rgb(244, 244, 244);
     background-image: url('is-searchicon.png');
     background-position: 5px 5px; 
