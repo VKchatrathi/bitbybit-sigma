@@ -87,6 +87,11 @@ body {
     background-image: url('backgroundtest2.webp');
     background-size: cover;
     color: #fff;
+    font-family: 'Courier New', Courier, monospacens-serif;
+    font-size: 20px;
+    
+   
+
 }
 
 
