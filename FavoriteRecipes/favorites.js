@@ -1,13 +1,12 @@
-document.addEventListener('DOMContentLoaded', function() {
+
   const apiKey = 'c21762e803a9480680f2aaecf1e16952'; 
 
   
    function showFavorites() {
     
     
-      const dishName = localStorage.getItem("save: "+itemname+'title');
-      const dishimg = localStorage.getItem("save: "+itemname+'img');
-      const dishid = localStorage.getItem("save: "+itemname+'id');
+      const dishName = localStorage.getItem('title');
+      
       
       const recipeApiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${dishName}&apiKey=${apiKey}`;
 
@@ -19,10 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
                   
                   data.results.forEach(recipe => {
                       recipeHTML += `
-                          <div>
-                              <h3>${recipe.title}</h3>
-                              <img src="${recipe.image}" alt="${recipe.title}" style="width: 150px; height: auto;">
-                              <p><a href="https://spoonacular.com/recipes/${recipe.title}-${recipe.id}" target="_blank">View Recipe</a></p>
+                          <div id="recipeCard">
+                          <a href="https://spoonacular.com/recipes/${recipe.title}-${recipe.id}" target="_blank">
+                                <img src="${recipe.image}" alt="${recipe.title}" style="width: 100%; height: auto; border-radius: 10px;">
+                                <h3>${recipe.title}</h3>
+                                </a>
                           </div>
                       `;
                   });
@@ -39,4 +39,4 @@ document.addEventListener('DOMContentLoaded', function() {
       
     
       }
-    });
+ 

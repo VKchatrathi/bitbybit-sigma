@@ -83,20 +83,7 @@ input[type="favoritestext"] {
     color: #333;
 }
 
-body {
-    background-image: url('image.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
-    font-family: 'Courier New', Courier, monospacens-serif;
-    font-size: 20px;
-    
-   
-
-}
-
-
-#recipeResults {
+#favoritesResults {
     display: grid;
     grid-template-columns: repeat(4, 300px);
     grid-gap: 50px;
@@ -106,7 +93,7 @@ body {
 }
 
 
-#recipeResults div {
+#favoritesResults div {
     background-color: rgb(208, 255, 247, 0.2);
     border-radius: 20px;
     padding: 20px;
@@ -118,19 +105,20 @@ body {
 
 
 
-#recipeResults img {
+#favoritesResults img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
+    z-index: 1;
 }
 
-#recipeResults a {
-    padding: 10px 20px; 
-    background-color: #4CAF50;
+#favoritesResults a {
     color: white;
-    border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-    margin-top: 50px;
+}
+
+#favoritesResults div:hover {
+    box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
 }
