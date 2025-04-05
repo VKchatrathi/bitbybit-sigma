@@ -3,7 +3,7 @@ input[type="text"] {
     box-sizing: border-box;
     border: none;
     border-radius: 7px;
-    font-size: 16px;
+    font-size: 25px;
     background-color: rgb(244, 244, 244);
     background-image: url('is-searchicon.png');
     background-position: 5px 5px; 
@@ -19,7 +19,6 @@ input[type="text"] {
     border-bottom: none;
     border-top: none;
     z-index: 99;
-    /*position the autocomplete items to be the same width as the container:*/
     top: 100%;
     left: 0;
     right: 0;
@@ -32,12 +31,12 @@ input[type="text"] {
     border-bottom: 1px solid #d4d4d4; 
   }
   
-  /*when hovering an item:*/
+  
   .autocomplete-items div:hover {
     background-color: #e9e9e9; 
   }
   
-  /*when navigating through the items using the arrow keys:*/
+  
   .autocomplete-active {
     background-color: DodgerBlue !important; 
     color: #ffffff; 
@@ -60,6 +59,18 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 
+input[type="favoritestext"] {
+    width: 260px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 7px;
+    font-size: 40px;
+    background-color: rgb(244, 244, 244);
+    background-image: url('is-searchicon.png');
+    background-position: 5px 5px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
 #HomeImage {
     width: 600px;
     height: auto;
