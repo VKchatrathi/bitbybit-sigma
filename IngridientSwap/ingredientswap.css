@@ -1,105 +1,120 @@
 body {
     background-image: url("IngrediSwapBackDrop1.jpg");
     background-size: cover;
-    background-position: center;
     color: #fff;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-
-.topnav {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px 0;
-}
-.topnav td {
-    padding: 10px;
-}
-.topnav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-}
-.topnav a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-}
-
-
-form {
-    text-align: center;
-    margin: 20px;
-}
-input[type="text"], input[type="submit"] {
-    width: 80%;
-    max-width: 400px;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 7px;
+    background-position: -1;
+  }
+  
+  
+  input[type="text"] {
+    width: 260px;
+    box-sizing: border-box;
     border: none;
-}
-input[type="text"] {
+    border-radius: 7px;
+    font-size: 16px;
     background-color: rgb(244, 244, 244);
     background-image: url('is-searchicon.png');
-    background-position: 10px center;
+    background-position: 5px 5px; 
     background-repeat: no-repeat;
-    padding-left: 40px;
-}
-input[type="submit"] {
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    
+  }
+  
+  .autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1px solid #d4d4d4; 
+  }
+  
+  
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9; 
+  }
+  
+  
+  .autocomplete-active {
+    background-color: DodgerBlue !important; 
+    color: #ffffff; 
+  }
+  
+  input[type="text"]:focus {
+    width: 30%;
+    outline: none;
+  }
+  input[type="submit"] {
+    font-size: 20px;
+    padding: 5px 20px;
     background-color: #4CAF50;
     color: white;
+    border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
-}
-input[type="submit"]:hover {
+  }
+  
+  input[type="submit"]:hover {
     background-color: #45a049;
-}
-
-
-#recipeResults {
+  }
+  
+  #recipeResults {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(4, 300px);
+    grid-gap: 50px;
+    font-size: 15px;
+    color: #000000;
     justify-content: center;
-}
-#recipeResults div {
-    background-color: rgba(208, 255, 247, 0.2);
+  }
+  
+  
+  #recipeResults div {
+    background-color: rgb(208, 255, 247, 0.2);
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
     text-align: center;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-}
-
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-h1, h2, h3 {
+  }
+  
+  
+  
+  #recipeResults img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    z-index: 1;
+  }
+  
+  #recipeResults a {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  #recipeResults div:hover {
+    box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
+  }
+  
+  #recipeResults .save {
+    display:flex;
+    justify-self: end;
+    background-color: #eaeaea;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
     text-align: center;
-    margin: 20px 0;
-}
-
-
-@media (max-width: 768px) {
-    .topnav {
-        flex-direction: column;
-        text-align: center;
-    }
-    .topnav td {
-        display: block;
-        width: 100%;
-    }
-    input[type="text"], input[type="submit"] {
-        width: 90%;
-    }
-}
+    z-index: 2;
+  }
