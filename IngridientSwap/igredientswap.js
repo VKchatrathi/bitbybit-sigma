@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
                   data.results.forEach(recipe => {
                       recipeHTML += `  
                       
-                          <div id="recipeCard" onclick="genWaver(${recipe.id})">
-                          <button type="button" class="save" onclick="save(${recipe.id},${recipe.title}, ${recipe.image}, ${recipe.id})">save</button>
+                          <div id="recipeCard">
+                          <button type="button" class="save" onclick="save((''${recipe.title}''))">save</button>
                           <a href="https://spoonacular.com/recipes/${recipe.title}-${recipe.id}" target="_blank">
                                 <img src="${recipe.image}" alt="${recipe.title}" style="width: 100%; height: auto; border-radius: 10px;">
                                 <h3>${recipe.title}</h3>
@@ -104,9 +104,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
-function save(itemname, title, img, id) {
-    localStorage.setItem("save: "+itemname+": title", title);
-    localStorage.setItem("save: "+itemname+": img", img);
-    localStorage.setItem("save: "+itemname+": id", id);
+function save(title) {
     alert('Recipe saved!');
+    localStorage.setItem("title", title);
+    console.log("Saved recipe:", title);
 }
