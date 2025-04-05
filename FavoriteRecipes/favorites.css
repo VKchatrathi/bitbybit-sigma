@@ -71,6 +71,15 @@ input[type="favoritestext"] {
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
 }
+
+#changestothis {
+    font-size: 20px;
+    color: #ee0000;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 #HomeImage {
     width: 600px;
     height: auto;
