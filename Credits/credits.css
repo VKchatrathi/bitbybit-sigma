@@ -1,0 +1,47 @@
+
+body {
+    color: #d3e4ff;
+}
+#HomeImage {
+    width: 600px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    font-size: 24px;
+    color: #333;
+}
+
+body {
+    background-image: url('HomeBackDrop.jpg');
+    background-size: cover;
+}
+
+h3 {
+    font-size: 24px;
+    color: #d3e4ff;
+    text-align: center;
+    text-emphasis: bold;;
+}
+
+h4 {
+    font-size: 18px;
+    color: #d3e4ff;
+    text-align: center;
+    text-emphasis: bold;;
+}
+
+.text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff20;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+}

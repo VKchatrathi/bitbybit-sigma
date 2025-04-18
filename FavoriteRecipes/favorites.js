@@ -2,7 +2,7 @@
   const apiKey = 'c21762e803a9480680f2aaecf1e16952'; 
 
   
-   function showFavorites() {
+   function howFavorites() {
     
     
       const dishName = localStorage.getItem('title');

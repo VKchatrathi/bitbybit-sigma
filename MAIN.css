@@ -16,13 +16,18 @@
     --main-border-radius: 8px;
 }
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Funnel Display', sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--main-bg-color);
 }
 
+
+
+
+
 h1, h2 {
+    animation: flip 0.4s   1 forwards ;
     text-align: center;
     margin-top: 50px;
 }
@@ -110,11 +115,15 @@ input {
     margin-right: 100px;
     margin-left: auto;
     text-emphasis: bold;
+    
+    transition-duration: 0.4s;
   }
   
   
   .topnav a:hover {
     box-shadow: var(--main-hover-shadow);
+    -webkit-animation: hover 0.3s ease-in-out;
+    animation: hover 0.3s ease-in-out;
   }
   
   
