@@ -71,10 +71,10 @@ input[type="favoritestext"] {
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
 }
-
+                                                                  
 #changestothis {
     font-size: 20px;
-    color: #ee0000;
+    color: #000000;
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -130,8 +130,4 @@ input[type="favoritestext"] {
 
 #favoritesResults div:hover {
     box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
-}
-
-body {
-    color: #d3e4ff;
 }

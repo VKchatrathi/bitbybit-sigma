@@ -2,7 +2,7 @@
   const apiKey = 'c21762e803a9480680f2aaecf1e16952'; 
 
   
-   function howFavorites() {
+   function showFavorites() {
     
     
       const dishName = localStorage.getItem('title');
@@ -27,7 +27,7 @@
                       `;
                   });
               } else {
-                  recipeHTML = '<p>No recipes found. Please try another dish.</p>';
+                  recipeHTML = '<p id="changestothis">No recipes found. Please try another dish.</p>';
               }
               
               document.getElementById('favoritesResults').innerHTML = recipeHTML;
